@@ -1,0 +1,47 @@
+<!--
+    form : 사용자가 입력한 데이터(입력값)를 서버로 보내기 위해 사용하는 태그
+    서버는 정보를 제공하는 호스트이다.
+
+    클라이언트가 어떤 요청을 보내는가에 따라, 응답은 달라질 수 있다.
+    로그인 양식은 세 개의 입력 요소로 구성되어 있으며,
+    세 개의 입력 데이터는 form을 통해 서버로 전송된다.
+
+    form 은 입력 요소들을 감싸며, 입력 값을 서버 측으로 제출(submit)할 수 있다.
+
+    form 의 입력값을 제출하기 위해 input 태그의 submit 타입 사용 가능!
+
+    <form 의 속성>
+    action : 입력값을 전성할 서버의 url
+    method : 클라이언트가 입력한 데이터를 어떤 식으로 전송할지(GET or POST)
+    
+    GET : 서버에 요청을 보내어 응답을 받아낸다. 서버로부터 정보를
+    '가져오겠다' 는 성격의 요청이다.
+    POST : 서버에 요청을 보내어 작업을 수행한다.
+    서버에 있는 데이터를 추가/수정/삭제 한 후에 응답을 받아낸다.
+    서버의 정보를 '조작하겠다' 는 성격의 요청이다.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>서버에 요청을 보내자, 폼!</title>
+    </head>
+    <body>
+        <h1>키우고 싶은 동물 고르기</h1>
+        <form action="exam.php" method="POST">
+            <input type="text" placeholder="NAME" name="name">
+            <br>
+            <select name="pet">
+                <option value="dog">강아지</option>
+                <option value="cat">고양이</option>
+                <option value="parrot">앵무새</option>
+            </select>
+            <br>
+            <input type="submit" value="전송">
+        </form>
+    </body>
+</html>
+
+<!--
+    - form 은 사용자가 입력 요소에 입력한 데이터를 서버로 전송해준다.
+-->
